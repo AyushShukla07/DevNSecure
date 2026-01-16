@@ -1,0 +1,160 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * DevNsecure Design System
+   * Tailwind CSS theme with elite engineering boutique aesthetic
+  */
+  :root {
+    --background: 0 0% 6.3%;
+    --foreground: 0 0% 96.1%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 96.1%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 96.1%;
+
+    --primary: 0 0% 96.1%;
+    --primary-foreground: 0 0% 6.3%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 96.1%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 174.4 100% 52.7%;
+    --accent-foreground: 0 0% 6.3%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 174.4 100% 52.7%;
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 96.1%;
+    --sidebar-primary: 174.4 100% 52.7%;
+    --sidebar-primary-foreground: 0 0% 6.3%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 96.1%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 174.4 100% 52.7%;
+  }
+
+  .dark {
+    --background: 0 0% 6.3%;
+    --foreground: 0 0% 96.1%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 96.1%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 96.1%;
+    --primary: 0 0% 96.1%;
+    --primary-foreground: 0 0% 6.3%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 96.1%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 174.4 100% 52.7%;
+    --accent-foreground: 0 0% 6.3%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 174.4 100% 52.7%;
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 96.1%;
+    --sidebar-primary: 174.4 100% 52.7%;
+    --sidebar-primary-foreground: 0 0% 6.3%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 96.1%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 174.4 100% 52.7%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-devnsecure-black text-devnsecure-white;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+
+  h1 {
+    @apply font-bold text-5xl md:text-6xl;
+  }
+
+  h2 {
+    @apply font-semibold text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply font-semibold text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .btn-teal {
+    @apply relative border border-devnsecure-teal px-6 py-3 rounded-[10px] text-devnsecure-white font-semibold uppercase text-sm transition-all duration-300 hover:shadow-[0_0_20px_rgba(20,241,217,0.3)];
+  }
+
+  .btn-teal:hover {
+    @apply bg-devnsecure-teal text-devnsecure-black;
+  }
+
+  .btn-text {
+    @apply text-devnsecure-white font-semibold uppercase text-sm transition-colors duration-300 hover:text-devnsecure-teal;
+  }
+
+  .card-dark {
+    @apply bg-devnsecure-charcoal border border-[#26262C] rounded-lg p-6 transition-all duration-300 hover:border-devnsecure-teal hover:shadow-[0_0_20px_rgba(20,241,217,0.1)];
+  }
+
+  .fade-in {
+    @apply animate-fade-in-up;
+  }
+
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--accent) / 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--accent) / 0.5);
+  }
+}
